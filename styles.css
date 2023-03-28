@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: "Heebo", sans-serif;
   min-height: 3000px;
+  padding-top: 70px;
 }
 
 ul {
@@ -13,7 +14,6 @@ ul {
 
 .container {
   max-width: 1180px;
-  margin: auto;
   padding: 0 16px;
 }
 
@@ -23,8 +23,9 @@ header {
   height: 70px;
   position: fixed;
   left: 0;
-  right: 0;
+  top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 header .container {
@@ -57,8 +58,162 @@ header nav ul li:last-of-type a {
 }
 
 /* HERO SECTION */
+
 section.hero img {
   width: 100%;
-  height: auto;
-  padding-top: 70px;
+  height: 100%;
+}
+
+section.hero {
+  position: relative;
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-content h1 {
+  font-weight: 400;
+  max-width: 945px;
+  font-size: 50px;
+  line-height: 56px;
+  letter-spacing: 1.25px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.hero-content button {
+  padding: 10px;
+  gap: 10px;
+
+  width: 200px;
+  max-width: 100%;
+  height: 50px;
+
+  background: #3e50e5;
+  border-radius: 25px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+}
+
+/* BEST SELLERS SECTION */
+section.best-sellers {
+  padding-top: 80px;
+}
+
+section.best-sellers h2 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: normal;
+  letter-spacing: 0.85px;
+  line-height: 42px;
+  margin: 0 0 14px 0;
+}
+
+section.best-sellers hr {
+  border: none;
+  border-top: 5px solid #67f11d;
+  width: 66px;
+}
+
+section.best-sellers .container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+  margin: 0 8px;
+}
+
+section.best-sellers .products-slider .product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  width: 33%;
+  margin: 0 8px;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.best-sellers .products-slider .product img {
+  max-width: 100%;
+}
+
+section.best-sellers .products-slider .product.new::before {
+  content: "New";
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  line-height: 21px;
+  text-align: center;
+  padding: 4px 15px;
+  border-radius: 15px;
+}
+
+section.best-sellers .products-slider .product .product-info .categories {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.38px;
+  margin: 0 0 8px 0;
+  color: #3e50e5;
+}
+section.best-sellers .products-slider .product .product-info .title {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+}
+section.best-sellers .products-slider .product .product-info .price {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  margin: 0 0 16px 0;
+}
+
+section.best-sellers .products-slider .product .product-info button {
+  border: 1px solid #000;
+  border-radius: 220px;
+  height: 50px;
+  width: 219.5px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 24px;
+  text-transform: uppercase;
 }

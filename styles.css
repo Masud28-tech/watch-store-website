@@ -14,6 +14,7 @@ ul {
 .container {
   max-width: 1180px;
   padding: 0 16px;
+  margin: auto;
 }
 
 header {
@@ -156,7 +157,7 @@ section.best-sellers .container {
   display: flex;
   justify-content: space-around;
   padding-top: 60px;
-  margin: 0 8px;
+  margin: auto;
 }
 
 section.best-sellers .products-slider .product {
@@ -345,4 +346,28 @@ footer .bottom-nav .container ul li.li-title {
   color: #ffffff;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+/* ********************************************************************* */
+/*************** RESPONSIVE WEBDESIGN - CSS MEDIA QUERY CODE ***************
+
+/* Start design FOR SMALL DESKTOP  */
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1180px;
+  }
+}
+
+/* Start design FOR TABLETS  */
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: 92%;
+  }
+}
+
+/* Start design FOR MOBILE VIEW  */
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
 }
